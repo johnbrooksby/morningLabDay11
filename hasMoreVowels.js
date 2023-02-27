@@ -1,6 +1,5 @@
  const hasMoreVowels = (word) => {
     const vowels = ["a", "e", "i", "o", "u"];
-    let vowelsNeeded = word.length / 2;
     let vowelsCount = 0;
     let wordSplit = word.toLowerCase();
 
@@ -9,11 +8,11 @@
         if (vowels.includes(letter)){
             vowelsCount++;
         }
-        if (vowelsCount > vowelsNeeded){
+        if (vowelsCount > word.length / 2){
             return true;
         }
     }
     return false;
  }
 
-console.log(hasMoreVowels('ice'));
+console.log(hasMoreVowels('Ice'));
